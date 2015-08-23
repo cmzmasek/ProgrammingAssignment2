@@ -2,7 +2,7 @@
 # to cache the result.
 
 
-# In the following is an example how to use these to functions:
+# In the following is an example on how to use these two functions:
 #
 # m1 <- matrix(c(2,2,3,2), nrow=2, ncol=2)
 # cm <- makeCacheMatrix(m1)
@@ -25,7 +25,7 @@
 # Repeat calls to cacheSolve(cm) would return cached results...
 
 
-# This function creates a special matrix object that  
+# This function creates a special matrix object that
 # can cache its inverse.
 makeCacheMatrix <- function(x = matrix()) {
   
@@ -38,7 +38,7 @@ makeCacheMatrix <- function(x = matrix()) {
     inv <<- NULL
   }
   
-  # This function returns the input matrix  
+  # This function returns the input matrix
   get <- function() {
     x
   }
@@ -54,7 +54,7 @@ makeCacheMatrix <- function(x = matrix()) {
     inv
   }
   
-  # This creates a list of the functions   
+  # This creates a list of the functions
   list(set = set,
        get = get,
        setInverse = setInverse,
